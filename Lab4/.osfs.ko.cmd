@@ -1,0 +1,1 @@
+savedcmd_/home/tainewang/Desktop/OS/Lab4/osfs.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/tainewang/Desktop/OS/Lab4/osfs.ko /home/tainewang/Desktop/OS/Lab4/osfs.o /home/tainewang/Desktop/OS/Lab4/osfs.mod.o

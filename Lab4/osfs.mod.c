@@ -1,0 +1,127 @@
+#include <linux/module.h>
+#define INCLUDE_VERMAGIC
+#include <linux/build-salt.h>
+#include <linux/elfnote-lto.h>
+#include <linux/export-internal.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+#ifdef CONFIG_UNWINDER_ORC
+#include <asm/orc_header.h>
+ORC_HEADER;
+#endif
+
+BUILD_SALT;
+BUILD_LTO_INFO;
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+#ifdef CONFIG_RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+
+
+static const char ____versions[]
+__used __section("__versions") =
+	"\x1c\x00\x00\x00\xc7\x7c\xbe\xc5"
+	"inode_init_owner\0\0\0\0"
+	"\x1c\x00\x00\x00\x48\x9f\xdb\x88"
+	"__check_object_size\0"
+	"\x18\x00\x00\x00\x6d\x55\x83\xde"
+	"d_instantiate\0\0\0"
+	"\x14\x00\x00\x00\x1c\x69\xb9\x75"
+	"new_inode\0\0\0"
+	"\x20\x00\x00\x00\x7b\x14\x50\x9f"
+	"unregister_filesystem\0\0\0"
+	"\x18\x00\x00\x00\x46\x4f\xd4\x47"
+	"simple_statfs\0\0\0"
+	"\x14\x00\x00\x00\x58\xed\x64\x47"
+	"d_make_root\0"
+	"\x18\x00\x00\x00\xd8\xd5\x65\x39"
+	"d_splice_alias\0\0"
+	"\x18\x00\x00\x00\x87\x19\x8a\x46"
+	"current_time\0\0\0\0"
+	"\x10\x00\x00\x00\x7c\xe9\x56\x42"
+	"iput\0\0\0\0"
+	"\x1c\x00\x00\x00\x7a\x99\x6d\x5a"
+	"register_filesystem\0"
+	"\x18\x00\x00\x00\x64\xbd\x8f\xba"
+	"_raw_spin_lock\0\0"
+	"\x18\x00\x00\x00\x8c\x89\xd4\xcb"
+	"fortify_panic\0\0\0"
+	"\x20\x00\x00\x00\x8d\xac\x1f\x8a"
+	"simple_inode_init_ts\0\0\0\0"
+	"\x10\x00\x00\x00\x7e\x3a\x2c\x12"
+	"_printk\0"
+	"\x1c\x00\x00\x00\xcb\xf6\xfd\xf0"
+	"__stack_chk_fail\0\0\0\0"
+	"\x1c\x00\x00\x00\x54\xfc\xbb\x6c"
+	"__arch_copy_to_user\0"
+	"\x14\x00\x00\x00\x8c\x87\xe4\x1c"
+	"make_kuid\0\0\0"
+	"\x10\x00\x00\x00\x94\xb6\x16\xa9"
+	"strnlen\0"
+	"\x28\x00\x00\x00\xb3\x1c\xa2\x87"
+	"__ubsan_handle_out_of_bounds\0\0\0\0"
+	"\x14\x00\x00\x00\xf6\xe6\x50\x5e"
+	"set_nlink\0\0\0"
+	"\x10\x00\x00\x00\x11\x13\x92\x5a"
+	"strncmp\0"
+	"\x14\x00\x00\x00\x27\xe2\xff\x43"
+	"from_kgid\0\0\0"
+	"\x10\x00\x00\x00\xda\xfa\x66\x91"
+	"strncpy\0"
+	"\x24\x00\x00\x00\x52\x3f\x0a\x4b"
+	"gic_nonsecure_priorities\0\0\0\0"
+	"\x18\x00\x00\x00\xb8\x17\x9d\xdc"
+	"default_llseek\0\0"
+	"\x14\x00\x00\x00\x38\x8d\x4c\xa2"
+	"from_kuid\0\0\0"
+	"\x10\x00\x00\x00\xad\x64\xb7\xdc"
+	"memset\0\0"
+	"\x1c\x00\x00\x00\x18\x15\xad\x7b"
+	"__insert_inode_hash\0"
+	"\x14\x00\x00\x00\x68\x92\x9b\x2f"
+	"make_kgid\0\0\0"
+	"\x14\x00\x00\x00\x1a\xec\xee\x0b"
+	"mount_nodev\0"
+	"\x10\x00\x00\x00\x97\x82\x9e\x99"
+	"vfree\0\0\0"
+	"\x20\x00\x00\x00\x79\x4c\x91\x74"
+	"generic_delete_inode\0\0\0\0"
+	"\x20\x00\x00\x00\x28\xe1\xa4\x12"
+	"__arch_copy_from_user\0\0\0"
+	"\x1c\x00\x00\x00\x67\x7b\xa2\x58"
+	"generic_file_open\0\0\0"
+	"\x1c\x00\x00\x00\xef\x6d\x5c\xa6"
+	"alt_cb_patch_nops\0\0\0"
+	"\x10\x00\x00\x00\x8f\x68\xee\xd6"
+	"vmalloc\0"
+	"\x1c\x00\x00\x00\xd1\xc0\x63\xde"
+	"__mark_inode_dirty\0\0"
+	"\x1c\x00\x00\x00\x18\x2d\x07\x2e"
+	"generic_file_llseek\0"
+	"\x1c\x00\x00\x00\x34\x4b\xb5\xb5"
+	"_raw_spin_unlock\0\0\0\0"
+	"\x18\x00\x00\x00\x56\x41\x31\xbc"
+	"nop_mnt_idmap\0\0\0"
+	"\x18\x00\x00\x00\xd4\xce\x9f\xb7"
+	"module_layout\0\0\0"
+	"\x00\x00\x00\x00\x00\x00\x00\x00";
+
+MODULE_INFO(depends, "");
+
+
+MODULE_INFO(srcversion, "DDC6740CFC111DE2569C144");

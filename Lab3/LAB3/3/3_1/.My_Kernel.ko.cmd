@@ -1,0 +1,1 @@
+savedcmd_/home/tainewang/Desktop/OS/Lab3/LAB3/3/3_1/My_Kernel.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/tainewang/Desktop/OS/Lab3/LAB3/3/3_1/My_Kernel.ko /home/tainewang/Desktop/OS/Lab3/LAB3/3/3_1/My_Kernel.o /home/tainewang/Desktop/OS/Lab3/LAB3/3/3_1/My_Kernel.mod.o
